@@ -1,12 +1,6 @@
-var words = [
-  'cat',
-  'zone',
-  'supper',
-  'find',
-  'storm',
-]
+var words = ["cat", "zone", "supper", "find", "storm"];
 
-var wordList = "You need to save your words into wordList"
+var wordList = "You need to save your words into wordList";
 
 /*
 Process the array so that you take the word formed by the second and
@@ -20,9 +14,16 @@ Take that comma delimited list and store it in the wordList variable.
 Place your code that does all of this below this comment block, and
 before the next comment block.
 */
-// PLACE YOUR CODE BELOW
 
+// PLACE YOUR CODE BELOW
+var list = [];
+words.map((word) => {
+  word = word.slice(1, 3);
+  list.push(word);
+});
+wordList = list.toString().replace(/\s*,/g, ", ");
 // PLACE YOUR CODE ABOVE
+
 /*
 When run with "node 2_extracting_words.js" you should see the following on
 the console:
@@ -31,5 +32,5 @@ Success
 at, on, in, up, to
 */
 
-wordList === 'at, on, up, in, to' && console.log('Success')
-console.log(wordList)
+wordList === "at, on, up, in, to" && console.log("Success");
+console.log(wordList);
